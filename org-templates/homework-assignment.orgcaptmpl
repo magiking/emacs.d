@@ -1,0 +1,4 @@
+* TODO %^{Assignment} :%^{Class Name |info|os|econ|sw2}:
+SCHEDULED: %^{Date Assigned(or to start)}t DEADLINE: %^{Due Date}t
+%i
+%?
