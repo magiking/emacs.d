@@ -1,0 +1,3 @@
+* emacs.d
+  Moving over from (neo)vim and totally embracing EVIL mode,
+  org, and the like.
