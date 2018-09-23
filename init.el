@@ -55,6 +55,18 @@
   :config
   (load-theme 'brutalist t)
   )
+
+;;
+;; misc
+;;
+
+;; short example man pages
+(use-package tldr
+  :ensure t)
+
+(use-package emojify
+  :ensure t)
+
 ;;
 ;; git
 ;;
