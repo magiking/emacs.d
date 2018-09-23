@@ -41,13 +41,20 @@
 (use-package gruvbox-theme
   :ensure t
   ;; :config
-  ;; (load-theme 'gruvbox-light-soft)
+  ;; (load-theme 'gruvbox-light-medium t)
   )
 
-(use-package magit
+(use-package base16-theme
   :ensure t
+  ;; :config
+  ;; (load-theme 'base16-grayscale-dark t)
   )
 
+(use-package brutalist-theme
+  :ensure t
+  :config
+  (load-theme 'brutalist t)
+  )
 ;;
 ;; org
 ;;
