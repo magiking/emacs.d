@@ -98,9 +98,10 @@
 	   entry
 	   (file+headline "~/doc/org/gtd.org" "Tasks")
 	   (file "~/.emacs.d/org-templates/task.orgcaptmpl"))
-	  ("wt"
+	  ("w"
 	   "Work Task"
-	   (file+headline "~/doc/org/gtd.org" "Work")
+	   entry
+	   (file+headline "~/doc/org/MSRDC.org" "Tasks")
 	   (file "~/.emacs.d/org-templates/task.orgcaptmpl"))
 	   )
 	)
