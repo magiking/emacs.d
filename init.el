@@ -156,6 +156,10 @@
 
 (use-package evil-escape
   :ensure t
+  :init
+  (setq-default evil-escape-key-sequence ";;")
+  (setq-default evil-escape-delay 0.2)
+  (setq-default evil-escape-unordered-key-sequence t)
   :config
   (evil-escape-mode)
   )
