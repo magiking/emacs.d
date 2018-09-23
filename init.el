@@ -56,6 +56,12 @@
   (load-theme 'brutalist t)
   )
 ;;
+;; git
+;;
+(use-package magit
+  :ensure t)
+
+;;
 ;; org
 ;;
 (use-package org
@@ -106,8 +112,8 @@
     "o" 'delete-other-windows ;; vim :only      | emacs C-x 1
     "q" 'delete-window        ;; vim :close     | emacs C-x 0
     "c" 'org-capture          ;; vim n/a        | emacs C-c c
-    "g" 'magit-status         ;; vim :Gstatus   | emacs C-c g if bound
     "w" 'evil-window-map      ;; vim C-w        | emacs C-w evil default
+    "g" 'magit-status            ;; vim :Gstatus   | emacs C-c g if bound
    )
   )
 
