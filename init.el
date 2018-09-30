@@ -2,13 +2,16 @@
 ;; The Rice
 ;; 
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") ;; I have yet to figue this one out
-;; (load-theme 'gruvbox t)
-;; (setq inhibit-startup-message t)
+(setq inhibit-startup-message t)
+(recentf-mode 1)
+(setq recentf-max-menu-items 10)
 ;; disable the uglay stuff
 ;; (menu-bar-mode -1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 (show-paren-mode)
+;; show in frames created with emacsclient
+;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
 ;; (global-linum-mode t)
 ;; (setq-default indent-tabs-mode nil)
@@ -59,6 +62,29 @@
 ;;
 ;; misc
 ;;
+
+;; change the startup screen
+(use-package dashboard
+  :ensure t
+  :init
+  (setq dashboard-banner-logo-title "Enjoy 'ya self")
+  (setq dashboard-startup-banner "~/.emacs.d/cool.png")
+  (setq dashboard-items '((agenda . 5)
+			  (recents  . 5)
+			  (projects . 5)
+			  ;; (bookmarks . 5)
+			  ))
+  :config
+  (dashboard-setup-startup-hook)
+  )
+
+
+;; form feed chars as horizontal lines
+(use-package page-break-lines
+  :diminish
+  :ensure t
+  :config
+  (setq global-page-break-lines-mode t))
 
 ;; short example man pages
 (use-package tldr
