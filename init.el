@@ -30,16 +30,21 @@
 
 (package-initialize)
 
-;; Bootstrap 'use-package' from Zamansky vid.
+;; Bootstrap 'use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
+;; for hiding minor-modes in the modeline
+(use-package diminish)
+
 (use-package try
+  :disabled
   :defer
   :ensure t)
 
 (use-package which-key
+  :defer
   :ensure t
   :config
   (which-key-mode))
@@ -48,6 +53,7 @@
 ;; theme
 ;;
 (use-package gruvbox-theme
+  :defer
   :ensure t
   ;; :config
   ;; (load-theme 'gruvbox-light-medium t)
@@ -115,9 +121,14 @@
 
 ;; short example man pages
 (use-package tldr
+  :defer
   :ensure t)
 
 (use-package emojify
+  :diminish
+  :defer
+  :ensure t)
+
 ;;
 ;; Snippets
 ;;
