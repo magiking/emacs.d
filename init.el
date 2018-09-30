@@ -60,9 +60,14 @@
   )
 
 (use-package brutalist-theme
+;;
+;; modeline
+;; 
+(use-package powerline ;; needs some customization if it's gonna look decent tho
+  :disabled
   :ensure t
   :config
-  (load-theme 'brutalist t)
+  (powerline-default-theme)
   )
 
 ;;
