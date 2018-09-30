@@ -91,6 +91,25 @@
   :ensure t)
 
 (use-package emojify
+;;
+;; Snippets
+;;
+(use-package yasnippet
+  :diminish
+  :defer 1
+  :ensure t
+  ;; :init
+  ;; (setq yas-snippet-dirs
+  ;; 	'("~/.emacs.d/snippets/tex/" ;; LaTeX snippets
+  ;; 	  ))
+  :config
+  (yas-global-mode 1)
+  )
+
+;; 'generic' snippents to try
+(use-package yasnippet-snippets
+  :disabled
+  :after (yasnippet)
   :ensure t)
 
 ;;
