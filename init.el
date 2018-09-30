@@ -118,6 +118,11 @@
 (use-package magit
   :ensure t)
 
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode +1))
+
 ;;
 ;; org
 ;;
@@ -173,6 +178,7 @@
     "g" 'magit-status            ;; vim :Gstatus   | emacs C-c g if bound
     "w" 'evil-window-map         ;; vim C-w        | emacs C-w evil default
     "t" 'compile                 ;; vim :make      | emacs M-x compile
+    "p" 'projectile-command-map  ;; vim none       | emacs C-c p (was suggested)
    )
   )
 
