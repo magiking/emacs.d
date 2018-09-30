@@ -18,6 +18,12 @@
 ;; (setq-default tab-width 4)
 ;; (setq indent-line-function 'insert-tab)
 
+;; backups and auto saves. I think that there may be more to it that just this
+;; https://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files#151946 
+;; https://stackoverflow.com/a/18330742
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq backup-by-copying t)
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
