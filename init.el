@@ -55,11 +55,27 @@
 
 (use-package base16-theme
   :ensure t
-  ;; :config
-  ;; (load-theme 'base16-grayscale-dark t)
+  :config
+  (load-theme 'base16-ocean t)
   )
 
+;; so, there are actaully a couple of variations of this guy
+;; that I want to check out,
+;; this shit totally makes my terminal look WAAAAY too colurful
 (use-package brutalist-theme
+  :defer
+  :ensure t
+  ;; :config
+  ;; (load-theme 'brutalist t)
+  )
+
+(use-package tao-theme ;; not super :flame: but I like it 
+  :defer
+  :ensure t
+  ;; :config
+  ;; (load-theme 'tao-yin t)
+  )
+
 ;;
 ;; modeline
 ;; 
