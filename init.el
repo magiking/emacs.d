@@ -61,18 +61,24 @@
 
 (use-package base16-theme
   :ensure t
-  :config
-  (load-theme 'base16-ocean t)
+  ;; :config
+  ;; (load-theme 'base16-ocean t)
+  )
+
+(use-package xresources-theme
+  :ensure t
+  ;; :config
+  ;; (load-theme 'xresources t)
   )
 
 ;; so, there are actaully a couple of variations of this guy
 ;; that I want to check out,
 ;; this shit totally makes my terminal look WAAAAY too colurful
 (use-package brutalist-theme
-  :defer
+  ;; :defer
   :ensure t
-  ;; :config
-  ;; (load-theme 'brutalist t)
+  :config
+  (load-theme 'brutalist t)
   )
 
 (use-package tao-theme ;; not super :flame: but I like it 
