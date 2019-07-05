@@ -132,10 +132,30 @@
   :defer
   :ensure t)
 
+;; neomuttrc syntax major mode
+(use-package mutt-mode
+  :defer
+  :ensure t)
+
+;; highlight current line
+(use-package highlight-current-line
+  :load-path "site-lisp/highlight-current-line.el" ;; is site-lisp special?
+  :disabled
+  :config
+  (highlight-current-line-on t))
+
 (use-package emojify
   :diminish
   :defer
   :ensure t)
+
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
 
 ;;
 ;; Latex
@@ -177,9 +197,14 @@
   (yas-global-mode 1)
   )
 
+;;
+;; folding
+;;
+(use-package origami
+  :ensure t)
+
 ;; 'generic' snippents to try
 (use-package yasnippet-snippets
-  :disabled
   :after (yasnippet)
   :ensure t)
 
@@ -237,6 +262,31 @@
   ;; 				(org-agenda-list 1)
   ;; 				(get-buffer "*Org Agenda*")
   ;; 				(delete-other-windows)))
+  )
+
+;;
+;; tramp
+;;
+(use-package tramp
+  :init
+  ;; this might chhange for windows
+  (setq tramp-default-method "ssh")
+  )
+
+;;
+;; python
+;;
+(use-package elpy
+  :ensure t
+  :init
+  (setq python-shell-interpreter "python"
+      python-shell-interpreter-args "-i"))
+
+;; Jupyter for emacs (Emacs IPython Notebook)
+(use-package ein 
+  :ensure t
+  :init
+  (setq ein:jupyter-default-server-command "jupyter")
   )
 
 ;;
