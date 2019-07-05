@@ -137,6 +137,31 @@
   :ensure t)
 
 ;;
+;; Latex
+;;
+(use-package tex-site
+  :ensure auctex
+  :defer t
+  :mode (".tex'" . latex-mode)
+  :commands (latex-mode LaTeX-mode plain-tex-mode)
+  :config
+  (progn
+    (add-to-list 'load-path "~/.emacs.d/elpa/auctex-11.89.5")
+    (load "auctex.el" nil t t)
+    (load "preview.el" nil t t)
+    )
+  )
+
+
+(use-package auctex-latexmk
+  ;; :disabled
+  :ensure t
+  :init
+  (auctex-latexmk-setup)
+  :config
+  )
+
+;;
 ;; Snippets
 ;;
 (use-package yasnippet
