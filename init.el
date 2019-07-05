@@ -10,6 +10,7 @@
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 (show-paren-mode)
+(setq sentence-end-double-space nil)
 ;; show in frames created with emacsclient
 ;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
@@ -243,6 +244,11 @@
 ;;
 (use-package evil-leader
   :ensure t
+  :init
+  ;; needs to happen before `(require 'evil)`
+  ;; for <Tab> cycling to work in org mode
+  ;; under terminal emacs 
+  (setq evil-want-C-i-jump nil) 
   :config
   (global-evil-leader-mode)
   (evil-leader/set-leader "<SPC>")
@@ -287,7 +293,9 @@
 
   (evil-define-key nil evil-normal-state-map
     ;; same as (define-key evil-normal-state-map (kbd "-") 'dired-jump)
-    "-" 'dired-jump)
+    "-" 'dired-jump
+    "H" 'evil-first-non-blank
+    "L" 'evil-end-of-line)
   )
 
 (use-package evil-magit
