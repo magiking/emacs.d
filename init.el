@@ -108,10 +108,11 @@
   :init
   (setq dashboard-banner-logo-title "Enjoy 'ya self")
   (setq dashboard-startup-banner "~/.emacs.d/cool.png")
-  (setq dashboard-items '((agenda . 5)
-			  (recents  . 5)
-			  (projects . 5)
-			  ;; (bookmarks . 5)
+  (setq dashboard-items '(
+			  ;; (agenda . 5)
+			  ;; (recents  . 5)
+			  ;; (projects . 5)
+			  (bookmarks . 15)
 			  ))
   :config
   (dashboard-setup-startup-hook)
