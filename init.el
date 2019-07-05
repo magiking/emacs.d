@@ -254,6 +254,16 @@
 	   entry
 	   (file+headline "~/doc/org/MSRDC.org" "Tasks")
 	   (file "~/.emacs.d/org-templates/task.orgcaptmpl"))
+	  ("c"
+	   "Class"
+	   entry
+	   (file+headline "~/src/school/software-eng-2/crc/crc.org" "Classes")
+	   (file "~/.emacs.d/org-templates/crc.orgcaptmpl"))
+	  ("b"
+	   "Book"
+	   entry
+	   (file+headline "~/doc/org/reading.org" "Sorting")
+	   (file "~/.emacs.d/org-templates/newbook.orgcaptmpl"))
 	   )
 	)
   ;; show org-agenda on startup
