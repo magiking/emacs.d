@@ -6,13 +6,17 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 10)
 ;; disable the uglay stuff
-;; (menu-bar-mode -1)
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 (show-paren-mode)
 (setq sentence-end-double-space nil)
+(setq dired-listing-switches "-aBhl  --group-directories-first")
 ;; show in frames created with emacsclient
 ;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+
+;; To help with debugging
+(setq debug-on-error nil)
 
 ;; some tabs stuff that I forgot to try out
 ;; (setq-default indent-tabs-mode nil)
@@ -45,7 +49,7 @@
   :ensure t)
 
 (use-package which-key
-  :defer
+  ;; :defer
   :ensure t
   :config
   (which-key-mode))
