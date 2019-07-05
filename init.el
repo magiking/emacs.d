@@ -174,11 +174,16 @@
   :ensure t
   ;; :bind
   ;; (global-set-key (kbd "C-c c") 'org-capture)
+  :init
+  (setq org-refile-targets '((nil :maxlevel . 9))) ; should affect all org files?
+  (setq org-refile-use-outline-path t)             ; show full paths for refiling
+  ;; (setq org-refile-path-complete-in-steps nil)     ; i don't have to put the full path?
+  
   :config
   ;; add files to those looked at by org-agenda
   (setq org-agenda-files (list
 			  "~/doc/org/gtd.org"
-			  "~/doc/druk/club-sports/meeting2018-08-23.org"))
+			  ))
   ;; configure org capture templates
   (setq org-capture-templates
 	'(("h" ;; hotkey
