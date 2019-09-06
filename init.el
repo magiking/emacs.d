@@ -293,8 +293,8 @@
 (use-package elpy
   :ensure t
   :init
-  (setq python-shell-interpreter "python"
-      python-shell-interpreter-args "-i"))
+  (setq python-shell-interpreter "ipython3"
+      python-shell-interpreter-args "--simple-prompt -i"))
 
 ;; Jupyter for emacs (Emacs IPython Notebook)
 (use-package ein 
