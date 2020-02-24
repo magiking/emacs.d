@@ -125,6 +125,7 @@
 
 
 ;; form feed chars as horizontal lines
+;;   used for dashboard.el
 (use-package page-break-lines
   :diminish
   :ensure t
@@ -288,6 +289,39 @@
   )
 
 ;;
+;; Java IDE environment using a language server
+;;
+(use-package lsp-mode
+  :ensure t)
+
+(use-package hydra
+  :ensure t)
+
+(use-package company-lsp
+  :ensure t)
+
+(use-package lsp-ui
+  :ensure t)
+
+(use-package treemacs
+  :ensure t)
+
+(use-package lsp-java
+  :ensure t
+  :disable
+  :after lsp
+  :config (add-hook 'java-mode-hook 'lsp))
+
+(use-package dap-mode
+  :ensure t
+  :after lsp-mode
+  :config
+  (dap-mode t)
+  (dap-ui-mode t))
+
+(use-package dap-java
+  :after (lsp-java));;
+
 ;; python
 ;;
 (use-package elpy
@@ -412,7 +446,7 @@
     ("~/doc/org/gtd.org" "~/doc/druk/club-sports/meeting2018-08-23.org")))
  '(package-selected-packages
    (quote
-    (mutt-mode muttrc-mode muttrc-mode-el tex auctex-latexmk auctex ein elpy highlight-current-line hl-current-line xresources-theme markdown-mode origami origami-mode yasnippet-snippets yasnippet dashboard tao-theme powerline emojify projectile tldr brutalist-theme evil-magit magit gruvbox-theme evil-surround evil-commentary evil-escape which-key use-package try org-evil evil-org))))
+    (dap-mode lsp-java gnu-elpa-keyring-update mutt-mode muttrc-mode muttrc-mode-el tex auctex-latexmk auctex ein elpy highlight-current-line hl-current-line xresources-theme markdown-mode origami origami-mode yasnippet-snippets yasnippet dashboard tao-theme powerline emojify projectile tldr brutalist-theme evil-magit magit gruvbox-theme evil-surround evil-commentary evil-escape which-key use-package try org-evil evil-org))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
