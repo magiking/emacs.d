@@ -14,6 +14,8 @@
 (setq dired-listing-switches "-aBhl  --group-directories-first")
 ;; show in frames created with emacsclient
 ;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+(add-to-list 'default-frame-alist '(font . "Go Mono-10" ))
+(set-face-attribute 'default t :font "Go Mono-10" )
 ;;
 ;; Hooks
 ;;
