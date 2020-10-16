@@ -14,6 +14,14 @@
 (setq dired-listing-switches "-aBhl  --group-directories-first")
 ;; show in frames created with emacsclient
 ;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+;;
+;; Hooks
+;;
+;;;; spelling
+(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
+
+
+
 
 ;; To help with debugging
 (setq debug-on-error nil)
