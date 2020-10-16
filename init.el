@@ -51,7 +51,8 @@
   (package-install 'use-package))
 
 ;; for hiding minor-modes in the modeline
-(use-package diminish)
+(use-package diminish
+  :ensure t)
 
 (use-package try
   :disabled
