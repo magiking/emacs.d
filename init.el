@@ -38,7 +38,7 @@
 ;;;; Line wrapping
 (add-hook 'text-mode-hook
 	  (lambda ()
-	    (set-column-fill 80))) 
+	    (set-column-fill 100))) 
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode) ;; makes the commands operate on a visual level...
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 ;;;; spelling
