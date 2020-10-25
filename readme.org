@@ -1,3 +1,40 @@
 * emacs.d
-  Moving over from (neo)vim and totally embracing EVIL mode,
-  org, and the like.
+  I probably need to come up with a better system for organizing my config.
+
+  For now, pretty much everything is in init.el.
+  
+  There's a moderate amount of configuration for org-mode,
+  mostly it's for capture and agenda stuffs.
+  My capture templates can be found in [[file:org-templates/][./org-templates]].
+  
+  I've got a handfull of themes in there,
+  but the ones that I really keep using are brutalist
+  and brutalist-dark. 
+  The tao themes are pretty similar,
+  but they don't quite go to the lengths that brutalist does
+  with size and underlining and stuff like that.
+  Definitely worth a [[https://melpa.org/#/brutalist-theme][look]].
+  
+  There's a bunch of packages in there that are =:diabled=
+  and I probably need to clean them out,
+  because if they are I definitely don't use them.
+  
+  I use =use-packakge= like most sane people.
+  There's probably a lot that I can do
+  to clean up what's in an =:init= block
+  and what's in =:config=.
+  If you're looking for some stuff that loads super quick
+  you're out of luck (takes like 6sec right now).
+  
+  I just learned about =add-hook= and =advice-add= recently,
+  and the're starting to make some appearances.
+  From the org-mode settings section of my =init.el=:
+
+  #+BEGIN_SRC elisp
+  ;; save org-files after I refile a heading
+  ;; useful because I need to save the buffer that I refiled too when I do this
+  (advice-add 'org-refile :after 'org-save-all-org-buffers)
+  #+END_SRC
+
+  Definitely worth the search if you've never used them.
+  
