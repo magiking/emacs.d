@@ -16,13 +16,6 @@
 ;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 (add-to-list 'default-frame-alist '(font . "Go Mono-10" ))
 (set-face-attribute 'default t :font "Go Mono-10" )
-;;
-;; Hooks
-;;
-;;;; spelling
-(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
-
-
 
 
 ;; To help with debugging
@@ -39,10 +32,22 @@
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq backup-by-copying t)
 
+;;
+;; Hooks
+;;
+;;;; Line wrapping
+(add-hook 'text-mode-hook
+	  (lambda ()
+	    (set-column-fill 80))) 
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode) ;; makes the commands operate on a visual level...
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+;;;; spelling
+(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
 
+;;;; Packages
 (package-initialize)
 
 ;; Bootstrap 'use-package'
@@ -65,6 +70,15 @@
   :config
   (which-key-mode))
 
+
+;;
+;; visual line wrapping (not 'filling'!)
+;; 
+(use-package visual-fill-column
+  :ensure t
+  :init
+  (add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
+  )
 ;;
 ;; theme
 ;;
