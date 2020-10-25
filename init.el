@@ -199,6 +199,20 @@
   )
 
 ;;
+;; pdf-tools
+;;
+(use-package pdf-tools
+  ;; better pdf viewer than doc-view
+  :ensure t
+  :config
+  (pdf-tools-install))
+
+(use-package org-pdftools
+  ;; gives org-mode links links for pdf-tools?
+  :ensure t
+  :hook (org-mode . org-pdftools-setup-link))
+
+;;
 ;; Snippets
 ;;
 (use-package yasnippet
@@ -375,6 +389,8 @@
   ;; for <Tab> cycling to work in org mode
   ;; under terminal emacs 
   (setq evil-want-C-i-jump nil) 
+  ;; for evil-collection
+  (setq evil-want-keybinding nil)
   :config
   (global-evil-leader-mode)
   (evil-leader/set-leader "<SPC>")
@@ -405,14 +421,15 @@
   :after (evil-leader) 
   :init
   ;; needs to happen before `(require 'evil)`
-  ;; for <Tab> cycling to work in org mode
-  ;; under terminal emacs 
+  ;; for <Tab> cycling to work in org mode under terminal emacs 
   (setq evil-want-C-i-jump nil) 
   ;; split behavior
   (setq evil-split-window-below t)
   (setq evil-vsplit-window-right t)
+  ;; settings for evil-collection modes
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
   :config
-  ;; need it!
   (evil-mode 1)
 
   ;; dired mods
@@ -468,6 +485,12 @@
 	      (evil-org-set-key-theme)))
   (require 'evil-org-agenda)
   (evil-org-agenda-set-keys))
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
