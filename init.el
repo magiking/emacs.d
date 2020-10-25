@@ -79,43 +79,44 @@
   :init
   (add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
   )
+
 ;;
 ;; theme
 ;;
 (use-package gruvbox-theme
-  :defer
+  :disabled
   :ensure t
-  ;; :config
-  ;; (load-theme 'gruvbox-light-medium t)
+  :config
+  (load-theme 'gruvbox-light-medium t)
   )
 
 (use-package base16-theme
+  :disabled
   :ensure t
-  ;; :config
-  ;; (load-theme 'base16-ocean t)
+  :config
+  (load-theme 'base16-ocean t)
   )
 
 (use-package xresources-theme
+  :disabled
   :ensure t
-  ;; :config
-  ;; (load-theme 'xresources t)
+  :config
+  (load-theme 'xresources t)
   )
 
 ;; so, there are actaully a couple of variations of this guy
 ;; that I want to check out,
 ;; this shit totally makes my terminal look WAAAAY too colurful
 (use-package brutalist-theme
-  ;; :defer
   :ensure t
   :config
-  (load-theme 'brutalist-dark t)
-  )
+  (load-theme 'brutalist-dark t))
 
 (use-package tao-theme ;; not super :flame: but I like it 
-  :defer
+  :disabled
   :ensure t
-  ;; :config
-  ;; (load-theme 'tao-yin t)
+  :config
+  (load-theme 'tao-yin t)
   )
 
 ;;
