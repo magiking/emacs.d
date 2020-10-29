@@ -173,6 +173,12 @@
   :config
   (setq global-page-break-lines-mode t))
 
+;; beacon.el - highlight cursor for certain moves
+(use-package beacon
+  :ensure t
+  :config
+  (beacon-mode 1))
+
 ;; short example man pages
 (use-package tldr
   :defer
