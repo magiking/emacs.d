@@ -17,6 +17,8 @@
 (add-to-list 'default-frame-alist '(font . "Go Mono-10" ))
 (set-face-attribute 'default t :font "Go Mono-10" )
 
+;; only have to type y or n, not yes or no
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; To help with debugging
 (setq debug-on-error nil)
