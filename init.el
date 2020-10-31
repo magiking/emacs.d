@@ -293,10 +293,10 @@
   ;; :bind
   ;; (global-set-key (kbd "C-c c") 'org-capture)
   :init
-  (setq org-refile-targets '(("~/doc/org/school-done.org" :maxlevel . 1)
-			     ("~/doc/org/gtd-done.org" :maxlevel . 1)
-			     ("~/doc/org/notes.org" :maxlevel . 1)
-			     ("~/doc/org/projects.org" :maxlevel . 1)
+  (setq org-refile-targets '(("~/Dropbox/org/school-done.org" :maxlevel . 1)
+			     ("~/Dropbox/org/gtd-done.org" :maxlevel . 1)
+			     ("~/Dropbox/org/notes.org" :maxlevel . 1)
+			     ("~/Dropbox/org/projects.org" :maxlevel . 1)
 			     (org-agenda-files :maxlevel . 2)
 			     (nil :maxlevel . 9))) ; should affect all org files?
   (setq org-refile-use-outline-path t)             ; show full paths for refiling
@@ -305,8 +305,8 @@
   :config
   ;; add files to those looked at by org-agenda
   (setq org-agenda-files (list
-			  "~/doc/org/gtd.org"
-			  "~/doc/org/ta.org"
+			  "~/Dropbox/org/gtd.org"
+			  "~/Dropbox/org/ta.org"
 			  ))
   ;;;; agenda settings
   ;; don't put a deadline in my agenda if I already scheduled it
@@ -320,17 +320,17 @@
 	   "Homework" ;; Name
 	   entry ;; type
 	   ;; heading type and title
-	   (file+headline "~/doc/org/gtd.org" "Homework Assignments")
+	   (file+headline "~/Dropbox/org/gtd.org" "Homework Assignments")
 	   (file "~/.emacs.d/org-templates/homework-assignment.orgcaptmpl")) ;; template
 	  ("t"
 	   "Task"
 	   entry
-	   (file+headline "~/doc/org/gtd.org" "Tasks")
+	   (file+headline "~/Dropbox/org/gtd.org" "Tasks")
 	   (file "~/.emacs.d/org-templates/task.orgcaptmpl"))
 	  ("w"
 	   "Work Task"
 	   entry
-	   (file+headline "~/doc/org/ta.org" "Computer Security Fall 2020")
+	   (file+headline "~/Dropbox/org/ta.org" "Computer Security Fall 2020")
 	   (file "~/.emacs.d/org-templates/task.orgcaptmpl"))
 	  ("c"
 	   "Class"
@@ -340,12 +340,12 @@
 	  ("b"
 	   "Book"
 	   entry
-	   (file+headline "~/doc/org/reading.org" "Sorting")
+	   (file+headline "~/Dropbox/org/reading.org" "Sorting")
 	   (file "~/.emacs.d/org-templates/newbook.orgcaptmpl"))
 	  ("n"
 	   "Note"
 	   entry
-	   (file+headline "~/doc/org/notes.org" "Other Stuff")
+	   (file+headline "~/Dropbox/org/notes.org" "Other Stuff")
 	   (file "~/.emacs.d/org-templates/note.orgcaptmpl"))
 	   )
 	)
@@ -534,9 +534,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("75615f00bca2d070186d217af34b1337badbc55e6a6d6c3f6929e4c3405c8079" "a06658a45f043cd95549d6845454ad1c1d6e24a99271676ae56157619952394a" "123a8dabd1a0eff6e0c48a03dc6fb2c5e03ebc7062ba531543dfbce587e86f2a" "e1d09f1b2afc2fed6feb1d672be5ec6ae61f84e058cb757689edb669be926896" "5ed25f51c2ed06fc63ada02d3af8ed860d62707e96efc826f4a88fd511f45a1d" "de1f10725856538a8c373b3a314d41b450b8eba21d653c4a4498d52bb801ecd2" "1195d71dfd46c43492993a528336ac7f8c7400b4c58338e5b40329d6cad655b6" "4757701a7557ab49ad1f1d190488714eea298a807912b9c6e115c076dc0f6322" "a5956ec25b719bf325e847864e16578c61d8af3e8a3d95f60f9040d02497e408" "dbade2e946597b9cda3e61978b5fcc14fa3afa2d3c4391d477bdaeff8f5638c5" "78c1c89192e172436dbf892bd90562bc89e2cc3811b5f9506226e735a953a9c6" "9df97422ff803c4a75d283d416f6c029b1d9e45a10af421ce86a6c207575b937" "cabc32838ccceea97404f6fcb7ce791c6e38491fd19baa0fcfb336dcc5f6e23c" "801a567c87755fe65d0484cb2bded31a4c5bb24fd1fe0ed11e6c02254017acb2" "fede08d0f23fc0612a8354e0cf800c9ecae47ec8f32c5f29da841fe090dfc450" "99c86852decaeb0c6f51ce8bd46e4906a4f28ab4c5b201bdc3fdf85b24f88518" "398bc1e483599d3a3c1c1ae3d4172f9be190c22f8653d068ff48ca9013def13e" "f376f4c51f98a91733fc41e4fa2d0f984760fc6c667510843735b4f22cb55768" "2473d6914a272b9ec16bfe7e76cad3155b6dd468bd9b367bfce55a454d2c250f" "a35c726bfa0b2c0bd92ccc014fe6c6f88027f1ec3243857eb89e1c91f9b17218" "2a8227a9bf8a351b6de5b74a556ac33b024f9bd6a09611fe7d2626bc3679339b" "b3bbb531e7878cb4efbe0e05f9fd96fb82de90c43c99186e64f3601c72887d40" "e8d3cdf006f3e55e80171e4eba28680c375333c03400b3761c1550c663285959" "0d85e76588e02674e72a7e9fb15a00654edb1225caf8dc34b2b7196442348c79" "055ff7ce38dec104a9960ed570866b879e95ff710d48d1218c328f6447779a03" "edcde825e6ca8c74d90c18c1bdabfbce47b295552643f79d4af1c5b61d469cff" "2dc478dece493e0463af5c89d07c694720c286acafbfe7f3ba3cbad2747387aa" "08ed4cd91eabbb4c7511ae0cc58c71ad8d49e389dfaae7e2e7920a1d2bd80926" "57e4d4b43056b02905773d9e296fe8d8d48d69fbe64be4b894f68614a5f9f1a6" "1955bc3ed1bd08b9faf957ee63e06c6db7b359b6042ee77d320e9c820c170daf" "e466debb2810353a676a96f13754004dec1f5dc9dad0049a3acc6555e1a5bd25" "8102e33bceaf7cf0b9575c2cc0feed9eb186076428793332f24b6c7e5d8189ad" "606750b8bdedf81354c1ab25a732695a55f0e2f4f2de93c77d02ef1daaac0ace" "24512748a34cc56c27cf8152a117370012e3d259a4b0ea4e213934f8b9e1079b" "701b9a9d3d6bd91e9d2a03d01c11e327fd2d5f16093fb0a29e90e09c171efb1c" "8269dcab821e44bb2e60c130d8c6f8c7189ea1425e32becb1778343681e10afd" "f3471cd1a4ca4f585929fc8ab9ebdee51b62bb3f01076adf140f94c92c7b1343" "a0c10191c444b2038635456716e732db6a416bb0b6d2596c6a7752174b70f80d" "e7970ce4c18d73ee384d1027231c8889ab25520457d2ab8cef88893ace4a414f" "12670281275ea7c1b42d0a548a584e23b9c4e1d2dabb747fd5e2d692bcd0d39b" "8cf1002c7f805360115700144c0031b9cfa4d03edc6a0f38718cef7b7cabe382" "c856158cc996d52e2f48190b02f6b6f26b7a9abd5fea0c6ffca6740a1003b333" "f27c3fcfb19bf38892bc6e72d0046af7a1ded81f54435f9d4d09b3bff9c52fc1" "ef98b560dcbd6af86fbe7fd15d56454f3e6046a3a0abd25314cfaaefd3744a9e" "cd4d1a0656fee24dc062b997f54d6f9b7da8f6dc8053ac858f15820f9a04a679" "7d2e7a9a7944fbde74be3e133fc607f59fdbbab798d13bd7a05e38d35ce0db8d" default))
+   '("ddb16a24ed41c1d12b4df5df8a9c0f1dd5b07699cfb3c31e2f0b5f51bc593036" "75615f00bca2d070186d217af34b1337badbc55e6a6d6c3f6929e4c3405c8079" "a06658a45f043cd95549d6845454ad1c1d6e24a99271676ae56157619952394a" "123a8dabd1a0eff6e0c48a03dc6fb2c5e03ebc7062ba531543dfbce587e86f2a" "e1d09f1b2afc2fed6feb1d672be5ec6ae61f84e058cb757689edb669be926896" "5ed25f51c2ed06fc63ada02d3af8ed860d62707e96efc826f4a88fd511f45a1d" "de1f10725856538a8c373b3a314d41b450b8eba21d653c4a4498d52bb801ecd2" "1195d71dfd46c43492993a528336ac7f8c7400b4c58338e5b40329d6cad655b6" "4757701a7557ab49ad1f1d190488714eea298a807912b9c6e115c076dc0f6322" "a5956ec25b719bf325e847864e16578c61d8af3e8a3d95f60f9040d02497e408" "dbade2e946597b9cda3e61978b5fcc14fa3afa2d3c4391d477bdaeff8f5638c5" "78c1c89192e172436dbf892bd90562bc89e2cc3811b5f9506226e735a953a9c6" "9df97422ff803c4a75d283d416f6c029b1d9e45a10af421ce86a6c207575b937" "cabc32838ccceea97404f6fcb7ce791c6e38491fd19baa0fcfb336dcc5f6e23c" "801a567c87755fe65d0484cb2bded31a4c5bb24fd1fe0ed11e6c02254017acb2" "fede08d0f23fc0612a8354e0cf800c9ecae47ec8f32c5f29da841fe090dfc450" "99c86852decaeb0c6f51ce8bd46e4906a4f28ab4c5b201bdc3fdf85b24f88518" "398bc1e483599d3a3c1c1ae3d4172f9be190c22f8653d068ff48ca9013def13e" "f376f4c51f98a91733fc41e4fa2d0f984760fc6c667510843735b4f22cb55768" "2473d6914a272b9ec16bfe7e76cad3155b6dd468bd9b367bfce55a454d2c250f" "a35c726bfa0b2c0bd92ccc014fe6c6f88027f1ec3243857eb89e1c91f9b17218" "2a8227a9bf8a351b6de5b74a556ac33b024f9bd6a09611fe7d2626bc3679339b" "b3bbb531e7878cb4efbe0e05f9fd96fb82de90c43c99186e64f3601c72887d40" "e8d3cdf006f3e55e80171e4eba28680c375333c03400b3761c1550c663285959" "0d85e76588e02674e72a7e9fb15a00654edb1225caf8dc34b2b7196442348c79" "055ff7ce38dec104a9960ed570866b879e95ff710d48d1218c328f6447779a03" "edcde825e6ca8c74d90c18c1bdabfbce47b295552643f79d4af1c5b61d469cff" "2dc478dece493e0463af5c89d07c694720c286acafbfe7f3ba3cbad2747387aa" "08ed4cd91eabbb4c7511ae0cc58c71ad8d49e389dfaae7e2e7920a1d2bd80926" "57e4d4b43056b02905773d9e296fe8d8d48d69fbe64be4b894f68614a5f9f1a6" "1955bc3ed1bd08b9faf957ee63e06c6db7b359b6042ee77d320e9c820c170daf" "e466debb2810353a676a96f13754004dec1f5dc9dad0049a3acc6555e1a5bd25" "8102e33bceaf7cf0b9575c2cc0feed9eb186076428793332f24b6c7e5d8189ad" "606750b8bdedf81354c1ab25a732695a55f0e2f4f2de93c77d02ef1daaac0ace" "24512748a34cc56c27cf8152a117370012e3d259a4b0ea4e213934f8b9e1079b" "701b9a9d3d6bd91e9d2a03d01c11e327fd2d5f16093fb0a29e90e09c171efb1c" "8269dcab821e44bb2e60c130d8c6f8c7189ea1425e32becb1778343681e10afd" "f3471cd1a4ca4f585929fc8ab9ebdee51b62bb3f01076adf140f94c92c7b1343" "a0c10191c444b2038635456716e732db6a416bb0b6d2596c6a7752174b70f80d" "e7970ce4c18d73ee384d1027231c8889ab25520457d2ab8cef88893ace4a414f" "12670281275ea7c1b42d0a548a584e23b9c4e1d2dabb747fd5e2d692bcd0d39b" "8cf1002c7f805360115700144c0031b9cfa4d03edc6a0f38718cef7b7cabe382" "c856158cc996d52e2f48190b02f6b6f26b7a9abd5fea0c6ffca6740a1003b333" "f27c3fcfb19bf38892bc6e72d0046af7a1ded81f54435f9d4d09b3bff9c52fc1" "ef98b560dcbd6af86fbe7fd15d56454f3e6046a3a0abd25314cfaaefd3744a9e" "cd4d1a0656fee24dc062b997f54d6f9b7da8f6dc8053ac858f15820f9a04a679" "7d2e7a9a7944fbde74be3e133fc607f59fdbbab798d13bd7a05e38d35ce0db8d" default))
  '(package-selected-packages
-   '(modus-vivendi-theme modus-operandi-theme visual-fill-column evil-collection org-pdftools org-pdfview pdf-tools diminish dap-mode lsp-java gnu-elpa-keyring-update mutt-mode muttrc-mode muttrc-mode-el tex auctex-latexmk auctex ein elpy highlight-current-line hl-current-line xresources-theme markdown-mode origami origami-mode yasnippet-snippets yasnippet dashboard tao-theme powerline emojify projectile tldr brutalist-theme evil-magit magit gruvbox-theme evil-surround evil-commentary evil-escape which-key use-package try org-evil evil-org)))
+   '(beacon modus-vivendi-theme modus-operandi-theme visual-fill-column evil-collection org-pdftools org-pdfview pdf-tools diminish dap-mode lsp-java gnu-elpa-keyring-update mutt-mode muttrc-mode muttrc-mode-el tex auctex-latexmk auctex ein elpy highlight-current-line hl-current-line xresources-theme markdown-mode origami origami-mode yasnippet-snippets yasnippet dashboard tao-theme powerline emojify projectile tldr brutalist-theme evil-magit magit gruvbox-theme evil-surround evil-commentary evil-escape which-key use-package try org-evil evil-org)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
