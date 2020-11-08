@@ -179,6 +179,15 @@
   :config
   (beacon-mode 1))
 
+;; rainbow-mode - show color values while reading them
+(use-package rainbow-mode
+  :ensure t
+  :diminish
+  :commands rainbow-mode
+  :config
+  (setq rainbow-ansi-colors nil)
+  (setq rainbow-x-colors nil))
+
 ;; short example man pages
 (use-package tldr
   :defer
