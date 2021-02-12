@@ -310,6 +310,8 @@
 			     (nil :maxlevel . 9))) ; should affect all org files?
   (setq org-refile-use-outline-path t)             ; show full paths for refiling
   ;; (setq org-refile-path-complete-in-steps nil)     ; i don't have to put the full path?
+
+  (setq org-log-done 'time)
   
   :config
   ;; add files to those looked at by org-agenda
